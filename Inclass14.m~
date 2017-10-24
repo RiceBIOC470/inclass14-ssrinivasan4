@@ -19,8 +19,8 @@ area_14 = [stats_14.Area];
 
 img14_sqrt = round(1.2*sqrt(mean(area_14))/pi);
 img14_erode = imerode(reader14_thres,strel('disk',img14_sqrt));
-img14_outside = ~imdilate(reader14_thres,strel('disk',1));
-img14_basin = imcomplement(bwdist(img14_outside));
-img14_basin = imimposemin(img14_basin,img14_erode|img14_outside);
-img14_watershed = watershed(img14_basin);
-imshow(img14_watershed, []);
+outside = ~imdilate(reader14_thres,strel('disk',1));
+basin = imcomplement(bwdist(outside));
+basin = imimposemin(basin,erodemask|outside);
+L = watershed(basin);
+imshow(L, []);
