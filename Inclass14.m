@@ -1,4 +1,10 @@
 %Inclass 14
+%GB comments
+1 100 
+2: Question asks to generate two separate sets of masks:1) using erosion and 2) using distance transform. Can only give credit for the Distance transform. Additionally, no comments were provided that describes which method was more useful. 
+2a 0 
+2b 100
+overall: 75
 
 %Work with the image stemcells_dapi.tif in this folder
 
